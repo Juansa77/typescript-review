@@ -1,4 +1,4 @@
-const msg:string = "Hello world";
+(()=>{const msg:string = "Hello world";
 
 const loquesea= {
     name:"Juansa",
@@ -28,4 +28,6 @@ const sayHello = (message:string)=>{
 })()
 
 
-console.log(msg, loquesea.age)
+console.log(msg, loquesea.age)})()
+
+
