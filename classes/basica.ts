@@ -15,6 +15,23 @@
                 this.realName = realName
         }
 
+        
+//* MÉTODO ESTÁTICO; SOLO SE PUEDE REFERENCIAR DESDE LA PROPIA CLASE
+
+static avgAge2(){
+return this.name
+}
+
+//* MÉTODOS, FUNCIONES PRIVADADAS Y PÚBLICAS
+//* MÉTODO PÚBLICO; ESTÁ DENTRO DE LA CLASE Y NO ESTÁ TIPADO COMO PRIVATE
+        bio() {
+            return `${this.name} (${this.team})`
+        }
+//* MÉTODO PRIVADO DENTRO DE CLASE; DE TODAS FORMAS, NO HAY RESTRICCIÓN EN JS Y SE PUEDE ACCEDER
+        private bio2() {
+            return `${this.name} (${this.team})`
+        }
+
     }
 //* Declaración de clase directamente en el constructor
     class Avenger2 {
@@ -29,11 +46,19 @@
             ) {
           
         }
-
+       
     }
+
+    
+//* LLámar a método estático; desde la clase
+
+console.log(Avenger.avgAge2)
+
 
     //* Instancia de clase
     const antman: Avenger = new Avenger("AntMan", "Avengers", "Scott Lang")
+
+    
 
     //* si quieres acceder a una propiedad estática, tienes que acceder a la clase, no a la instancia
 
