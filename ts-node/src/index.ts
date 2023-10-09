@@ -1,10 +1,9 @@
-import { Pokemon } from './interfaces/pokemon';
-import axios from "axios";
-import { getPokemon } from "./generics/get-pokemon";
+import { Pokemon } from './decorators/pokemon-class';
 
-getPokemon(1)
-  .then(pokemon => console.log(pokemon.moves))
-  .catch(error => console.log(error))
-  .finally(() => console.log("fin de función"));
 
-console.log(getPokemon(2));
+//*Esto nos dará un error en consola porque hemos bloqueado con un decorador la extensión de clase
+//(Pokemon.prototype  as any).customName = "Pikachu"
+
+const charmander = new Pokemon("Charmander")
+
+charmander.savePokemonToDB(34)
